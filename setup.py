@@ -9,7 +9,7 @@ from airplane_mode import __version__ as version
 setup(
 	name="airplane_mode",
 	version=version,
-	description="App for airplane ticket bookings",
+	description="App for Airplane Ticket Booking",
 	author="Sandeep Kakde",
 	author_email="sandeep@agkiya.com",
 	packages=find_packages(),

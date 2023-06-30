@@ -1,6 +1,6 @@
 ## Airplane Mode
 
-App for airplane ticket bookings
+App for Airplane Ticket Booking
 
 #### License
 

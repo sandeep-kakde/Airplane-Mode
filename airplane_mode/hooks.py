@@ -1,7 +1,7 @@
 app_name = "airplane_mode"
 app_title = "Airplane Mode"
 app_publisher = "Sandeep Kakde"
-app_description = "App for airplane ticket bookings"
+app_description = "App for Airplane Ticket Booking"
 app_email = "sandeep@agkiya.com"
 app_license = "MIT"
 # required_apps = []
