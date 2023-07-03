@@ -4,10 +4,15 @@
 import frappe
 from frappe.model.document import Document
 
-import random
-
-
 class AirplaneTicket(Document):
+	def before_insert(self):
+		flight_name = frappe.db.get_value("Airplane Flight", self.flight, "airplane")
+		flight_capacity = frappe.db.get_value("Airplane", flight_name, "capacity")
+		airplane_tickets_count = frappe.db.count("Airplane Ticket", {"flight": self.flight})
+
+		if airplane_tickets_count >= flight_capacity:
+			frappe.throw("Flight is full")
+
 	def validate(self):
 		unique_add_ons = []
 		add_ons = []
@@ -20,9 +25,9 @@ class AirplaneTicket(Document):
 
 
 	def before_save(self):
-		random_integer = str(random.randint(0, 9))
-		random_alphabet = random.choice(['A', 'B', 'C', 'D', 'E'])
-		self.seat = random_integer + random_alphabet
+		# random_integer = str(random.randint(0, 9))
+		# random_alphabet = random.choice(['A', 'B', 'C', 'D', 'E'])
+		# self.seat = random_integer + random_alphabet
 		total_amount = 0.0
 		for add_on in self.add_ons:
 			total_amount += add_on.amount
