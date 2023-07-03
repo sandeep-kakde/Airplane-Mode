@@ -40,11 +40,11 @@
  "index_web_pages_for_search": 1,
  "links": [
   {
-   "link_doctype": "Airplane",
-   "link_fieldname": "airline"
+   "link_doctype": "Airplane Flight",
+   "link_fieldname": "airplane"
   }
  ],
- "modified": "2023-06-30 20:30:30.786313",
+ "modified": "2023-07-03 17:22:36.971887",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airline",
